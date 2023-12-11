@@ -70,11 +70,11 @@ btnRoll.addEventListener('click',function(){
 btnHold.addEventListener('click',function(){
     if(playing){
 
-    //1.Add current score to ative player's score.
+    //1.Add current score to active player's score.
     scores[activePlayer]+=currentScore;
     //console.log(scores[activePlayer]);
     document.getElementById(`score--${activePlayer}`).textContent=scores[activePlayer];
-    if(scores[activePlayer]>=25){
+    if(scores[activePlayer]>=50){
         playing=false;
         document.querySelector(`.player--${activePlayer}`).classList.add(`player--winner`);
         document.querySelector(`.player--${activePlayer}`).classList.remove(`player--active`);
